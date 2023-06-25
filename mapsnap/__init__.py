@@ -110,7 +110,7 @@ class MapSnap:
                 if isinstance(fval, Enum):
                     fval = fval.value
                 elif isinstance(fval, list):
-                    if field.name == "annotations":
+                    if field.name == "annotations" or field.name == "overlays":
                         fval = json.dumps([a.serialized for a in fval])
                     else:
                         fval = ",".join([str(v) for v in fval])
