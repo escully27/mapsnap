@@ -28,6 +28,7 @@ class Overlay:
     strokeColor: str
     lineWidth: int
     lineDash: Union[None, List[int]]
+    lineGradient: Dict = field(default_factory=dict)
 
 
 @dataclass
